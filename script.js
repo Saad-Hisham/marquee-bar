@@ -33,8 +33,8 @@ const details = document.querySelectorAll('.details');
 
 setInterval(() => {
   details.forEach((detail) => {
-    if(detail.getBoundingClientRect().left<=-100){
-      detail.style.marginLeft ="20rem"
+    if(detail.getBoundingClientRect().left<=-50){
+      detail.style.marginLeft ="30rem"
     }
     console.log();
   });
