@@ -42,7 +42,7 @@
   transform-style: preserve-3d;
   transform-origin: center bottom;
   backface-visibility: hidden;
-  transition: all 0.5s ease-in-out;
+  transition: transform  0.5s ease-in-out;
   transform: rotateX(-180deg);
   padding-left: 38px;
   padding-top: 45px;
@@ -86,6 +86,7 @@ body{
 }
 ul li{
   margin-left: 4rem;
+  cursor: pointer;
 }
 
 /* Pause the animation when hovering over an li element */
