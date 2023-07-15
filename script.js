@@ -1,15 +1,43 @@
-const links = document.querySelectorAll('.tickerTape > div > .link-container');
+const marquee = document.querySelectorAll('.marquee__content');
 
-links.forEach(link => {
-  const a = link.querySelector('a');
-  const details = link.querySelector('.details');
+// Get the width of the details container
+const detailsWidth = document.querySelector('.details').offsetWidth;
 
+// Set the left margin of the last list item to the width of the details container
 
-  link.addEventListener('mouseover', () => {
-    details.classList.add('flip-in'); // add flip-in class to show the details element
+for (let i = 0; i < marquee.length; i++) {
+  marquee[i].lastElementChild.style.marginRight = `${detailsWidth}px`;
+}
+
+// Pause both marquee__content elements when hovering over an li element
+const liElements = document.querySelectorAll('.marquee__content li');
+liElements.forEach(li => {
+  li.addEventListener('mouseenter', () => {
+    for (let i = 0; i < marquee.length; i++) {
+   
+
+      marquee[i].style.animationPlayState = 'paused';
+    }
   });
-
-  link.addEventListener('mouseout', () => {
-    details.classList.remove('flip-in'); // remove flip-in class to hide the details element
+  li.addEventListener('mouseleave', () => {
+    for (let i = 0; i < marquee.length; i++) {
+      marquee[i].style.animationPlayState = 'running';
+    }
   });
 });
+
+
+// Get the position of the .details element
+const details = document.querySelectorAll('.details');
+
+
+setInterval(() => {
+  details.forEach((detail) => {
+    if(detail.getBoundingClientRect().left<=-100){
+      detail.style.marginLeft ="20rem"
+    }
+    console.log();
+  });
+}, 10);
+
+// Continuously update the position of the .other-element element
