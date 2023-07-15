@@ -33,11 +33,12 @@ const details = document.querySelectorAll('.details');
 
 setInterval(() => {
   details.forEach((detail) => {
-    if(detail.getBoundingClientRect().left<=-50){
-      detail.style.marginLeft ="30rem"
-    }
-    console.log();
+    const detailPosition = detail.getBoundingClientRect();
+    console.log(detailPosition.left)
+
+    if (detailPosition.left <= -50) {
+      detail.style.marginLeft = "30rem";
+    } 
+    
   });
 }, 10);
-
-// Continuously update the position of the .other-element element
