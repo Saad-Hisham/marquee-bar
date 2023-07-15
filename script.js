@@ -23,7 +23,9 @@ setInterval(() => {
     const detailPosition = detail.getBoundingClientRect();
 
     if (detailPosition.left <= -50) {
-      detail.style.marginLeft = `30rem`;
+      detail.style.marginLeft = `${(detailPosition.left*-1)*4}px`
+      detail.style.transitionProperty="transform"
+
     }
     if (detailPosition.left >= 600 ) {
       detail.style.marginLeft = `0px`;
