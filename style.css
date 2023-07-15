@@ -31,7 +31,7 @@
   width: 641px;
   height: 279px;
   position: absolute;
-  top: -291px;
+  top: -339px;
   z-index: 2;
   left: 0;
   box-shadow: 2px 4px 14px 0px rgba(199,199,199,0.75);
@@ -42,7 +42,7 @@
   transform-style: preserve-3d;
   transform-origin: center bottom;
   backface-visibility: hidden;
-  transition: transform  0.5s ease-in-out;
+  transition: all  0.5s ease-in-out;
   transform: rotateX(-180deg);
   padding-left: 38px;
   padding-top: 45px;
