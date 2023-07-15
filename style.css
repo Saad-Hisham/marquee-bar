@@ -20,7 +20,7 @@ body{
   
 }
 .tickerTape >div.parent {
-  position: absolute;
+  position: fixed;
   left: 0%;
   animation: slideIt 15s linear infinite;
   color: black;
@@ -75,8 +75,8 @@ a {
   position: relative;
 }
 @keyframes slideIt{
-  0%{left:100vw;}
-  100%{left:-34%;}
+  0%{left:100%;}
+  100%{left:-127rem}
 }
 
 h2{
@@ -91,8 +91,14 @@ button{
   border: 1px solid black;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 1rem
+  padding: 1rem;
+  outline: none;
 }
 html,body{
   overflow-x: hidden;
+}
+button:hover{
+  background-color: black;
+  color: white;
+  transition:  all ease-in-out .5s;
 }
