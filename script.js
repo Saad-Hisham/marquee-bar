@@ -25,7 +25,7 @@ setInterval(() => {
     if (detailPosition.left <= -50) {
       detail.style.marginLeft = `30rem`;
     }
-    if (detailPosition.left >= 400 ) {
+    if (detailPosition.left >= 600 ) {
       detail.style.marginLeft = `0px`;
     }
   
