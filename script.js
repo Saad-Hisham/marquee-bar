@@ -27,7 +27,7 @@ setInterval(() => {
       detail.style.transitionProperty="transform"
 
     }
-    if (detailPosition.left >= 600 ) {
+    if (detailPosition.left >= 641 ) {
       detail.style.marginLeft = `0px`;
     }
   
