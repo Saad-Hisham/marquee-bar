@@ -23,7 +23,9 @@
 .link-container {
   position: relative;
 }
-
+.marquee__content:nth-of-type(2){
+  z-index: -1;
+}
 .details {
   white-space: normal;
   display: inline-block;
