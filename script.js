@@ -21,19 +21,16 @@ const details = document.querySelectorAll('.details');
 setInterval(() => {
   details.forEach((detail) => {
     const detailPosition = detail.getBoundingClientRect();
-    console.log(details[0].getBoundingClientRect().left, details[2])
+
     if (detailPosition.left <= -50) {
-      detail.style.marginLeft = `${Math.ceil((detailPosition.left * -1) * 5)}px`
-      detail.style.transitionProperty = "transform"
+      detail.style.marginLeft = `${Math.ceil((detailPosition.left*-1)*5)}px`
+      detail.style.transitionProperty="transform"
 
     }
-    if (detailPosition.left >= window.innerWidth - 200) {
-      detail.style.marginLeft = `-30rem`
-      detail.style.transitionProperty = "transform"
-
+    if (detailPosition.left >= 641 ) {
+      detail.style.marginLeft = `0px`;
     }
-
-
+  
 
   });
-}, 1000);
+}, 1);
